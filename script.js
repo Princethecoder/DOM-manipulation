@@ -599,3 +599,51 @@ timer();
 }
 addNewChildElementToParent("numbers-list", "li", "Hello this is done with js");
  */
+
+/* console.log("Greetings Start"); // 1
+
+function showGreeting(name) {
+  console.log("Hello " + name + "!"); // 2
+}
+
+console.log("Greeting Rohan"); // 3
+setTimeout(() => showGreeting("Rohan"), 5000);
+
+console.log("Greetings End"); // 4
+ */
+//1 3 4 2
+/* 
+function addNewChildElementToParent(parentId, childTagType, text) 
+It adds a new child to the element with id,  parentId
+Tag type of the child should be childTagType and content should be text
+ */
+/* 
+function addNewChildElementToParent(parentId, childTagType, text) {
+  const createElem = document.createElement(childTagType);
+  createElem.textContent = text;
+
+  const targetElem = document.getElementById(parentId);
+
+  targetElem.append(createElem);
+}
+
+addNewChildElementToParent("content-section", "p", "hello this coming from js");
+ */
+
+function parent() {
+  const message = "\n👨 I am from parent";
+  function child1() {
+    console.log(message, "👧 Called from child 1️⃣");
+  }
+
+  function child2() {
+    const message = "Child Message";
+    console.log(message, "Called from child 2️⃣\n");
+  }
+
+  child1();
+  child2();
+}
+
+parent();
+//i am from parent called from child 1 // child message called from child
